@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+<head>
+    <link href="{% static 'frontend/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="{% static 'frontend/js/bootstrap.bundle.min.js' %}"></script>
+    <title>Memz</title>
+    {% block head %}
+    {% endblock %}
+</head>
+{% block body %}
+    <body>
+    <div class="container">
+        {% include 'components/header.html' %}
+
+        {% block container %}
+        {% endblock %}
+    </div>
+    </body>
+{% endblock %}
+</html>
